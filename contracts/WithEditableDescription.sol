@@ -18,5 +18,13 @@ contract WithEditableDescription is Ownable, WithDescription {
         onlyOwner
     {
         description = _description;
+        emitDescritionChanged(_description);
+    }
+
+    // Ignore internal and argument warning.
+    function emitDescritionChanged(string _description)
+        internal
+    {
+        // Contracts are free to override to emitEvent
     }
 }
