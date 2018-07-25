@@ -1,16 +1,16 @@
-var WithDescription = artifacts.require("WithDescription")
+var WithDescription = artifacts.require('WithDescription');
 
 require('chai')
-    .use(require('chai-as-promised'))
-    .should();
+  .use(require('chai-as-promised'))
+  .should();
 
-contract('WithDescription', function() {
-    it('should be properly instantiated', async function() {
-        this.instance = await WithDescription.new("Test");
-        this.instance.should.exist;
-    });
+contract('WithDescription', function () {
+  it('should be properly instantiated', async function () {
+    this.instance = await WithDescription.new('Test');
+    this.instance.should.exist;
+  });
 
-    it('should have a public description', async function(){
-        (await this.instance.description.call()).should.be.equal("Test");
-    });
+  it('should have a public description', async function () {
+    (await this.instance.description.call()).should.be.equal('Test');
+  });
 });
