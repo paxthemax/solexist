@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/paxthemax/solexist#readme",
   "dependencies": {
+    "bs58": "^4.0.1",
     "zeppelin-solidity": "1.11.0"
   },
   "devDependencies": {
