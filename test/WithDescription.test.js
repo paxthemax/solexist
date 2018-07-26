@@ -7,7 +7,6 @@ require('chai')
 contract('WithDescription', function () {
   it('should be properly instantiated', async function () {
     this.instance = await WithDescription.new('Test');
-    this.instance.should.exist;
   });
 
   it('should have a public description', async function () {
