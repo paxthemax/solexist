@@ -12,7 +12,6 @@ require('chai')
 contract('WithEditableDescription', function ([owner, other]) {
   it('should be properly instantiated', async function () {
     this.instance = await WithEditableDescription.new('Test', { from: owner });
-    this.instance.should.exist;
   });
 
   it('should have the right owner', async function () {
